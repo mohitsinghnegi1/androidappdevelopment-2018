@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".bookNow"
+    tools:showIn="@layout/app_bar_book_now"
+    android:background="@drawable/background_gradient">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_gradient">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:background="@drawable/background_gradient"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <SearchView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:autofillHints="@string/action_settings"
+                android:background="@drawable/border"
+                android:contextClickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="start"
+                android:queryHint="search Hotel"
+                android:textAlignment="textStart"
+
+                />
+
+
+            <ViewFlipper
+                android:id="@+id/flip1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/border_line">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@drawable/pic4"
+                    android:gravity="center"
+                    android:scaleType="centerCrop"
+
+
+                    >
+
+                    <ViewFlipper
+                        android:id="@+id/flip2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/transparent_black"
+
+
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/transparent_blue"
+                                android:fontFamily="@font/confortaa"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="Saffron"
+                                android:textAlignment="center"
+                                android:textAllCaps="true"
+                                android:textColor="#fff"
+                                android:textSize="14dp"
+                                android:textStyle="bold"
+                                android:typeface="normal"
+
+
+                                />
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/transparent_blue"
+                                android:fontFamily="@font/confortaa"
+                                android:padding="10dp"
+                                android:text="hotel front is very nice and all types food available in the hote"
+                                android:textAlignment="center"
+                                android:textColor="#fff"
+                                android:textSize="14dp" />
+                        </LinearLayout>
+                    </ViewFlipper>
+                </LinearLayout>
+
+            </ViewFlipper>
+
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#0493ea"
+                android:fontFamily="@font/confortaa"
+                android:padding="10dp"
+                android:text="About Safrron"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#fff"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <ViewFlipper
+                android:id="@+id/flip3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/border"
+                    android:fontFamily="@font/confortaa"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Yatra.com is a leading aggregator of Hotels in India and internationally. With over 83,000 hotels in India covering 1100 cities, it is India’s largest platform for Domestic Hotels. Internationally it has more than 5 lakh hotels associated with it, covering popular destinations across the world."
+                    android:textAlignment="center"
+                    android:textColor="#fff" />
+
+            </ViewFlipper>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/transparent_blue"
+                android:fontFamily="@font/confortaa"
+                android:padding="10dp"
+                android:text="PRICE :$450/month"
+                android:textAlignment="center"
+                android:textColor="#fff" />
+
+            <Button
+                android:layout_width="300dp"
+                android:layout_height="0.5dp"
+                android:layout_margin="10dp"
+                android:background="#fff" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/book1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#0493ea"
+                    android:fontFamily="@font/confortaa"
+                    android:onClick="book"
+
+                    android:text="Book Now"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textSize="14dp" />
+
+                <Button
+                    android:id="@+id/detail1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#0493ea"
+                    android:fontFamily="@font/confortaa"
+                    android:onClick="detail"
+                    android:text="Show Details"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+
+
+                    android:textSize="14dp" />
+
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="300dp"
+                android:layout_height="0.5dp"
+                android:layout_margin="10dp"
+                android:background="#fff" />
+
+
+            //second
+
+            <ViewFlipper
+                android:id="@+id/flip4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/border_line">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@drawable/pic5"
+                    android:gravity="center"
+                    android:scaleType="centerCrop"
+
+
+                    >
+
+                    <ViewFlipper
+                        android:id="@+id/flip5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/transparent_black"
+
+
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/transparent_blue"
+                                android:fontFamily="@font/confortaa"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="SWEZOKA"
+                                android:textAlignment="center"
+                                android:textAllCaps="true"
+                                android:textColor="#fff"
+                                android:textSize="14dp"
+                                android:textStyle="bold"
+                                android:typeface="normal"
+
+
+                                />
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/transparent_blue"
+                                android:fontFamily="@font/confortaa"
+                                android:padding="10dp"
+                                android:text="hotel front is very nice and all types food available in the hote"
+                                android:textAlignment="center"
+                                android:textColor="#fff"
+                                android:textSize="14dp" />
+
+
+                        </LinearLayout>
+                    </ViewFlipper>
+                </LinearLayout>
+            </ViewFlipper>
+
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#0493ea"
+                android:fontFamily="@font/confortaa"
+                android:padding="10dp"
+                android:text="About SWEZOKA"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#fff"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <ViewFlipper
+                android:id="@+id/flip6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/border"
+                    android:fontFamily="@font/confortaa"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Yatra.com is a leading aggregator of Hotels in India and internationally. With over 83,000 hotels in India covering 1100 cities, it is India’s largest platform for Domestic Hotels. Internationally it has more than 5 lakh hotels associated with it, covering popular destinations across the world."
+                    android:textAlignment="center"
+                    android:textColor="#fff" />
+
+
+            </ViewFlipper>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/transparent_blue"
+                android:fontFamily="@font/confortaa"
+                android:padding="10dp"
+                android:text="PRICE :$420/month"
+                android:textAlignment="center"
+                android:textColor="#fff" />
+
+            <Button
+                android:layout_width="300dp"
+                android:layout_height="0.5dp"
+                android:layout_margin="10dp"
+                android:background="#fff" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/book2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#0493ea"
+                    android:fontFamily="@font/confortaa"
+
+                    android:onClick="book"
+                    android:text="Book Now"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textSize="14dp" />
+
+                <Button
+                    android:id="@+id/detail2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#0493ea"
+                    android:fontFamily="@font/confortaa"
+                    android:onClick="detail"
+                    android:text="Show Details"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+
+
+                    android:textSize="14dp" />
+
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="300dp"
+                android:layout_height="0.5dp"
+                android:layout_margin="10dp"
+                android:background="#fff" />
+
+
+            />
+
+            <ViewFlipper
+                android:id="@+id/flip7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/border_line">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@drawable/pic10"
+                    android:gravity="center"
+                    android:scaleType="centerCrop"
+
+
+                    >
+
+                    <ViewFlipper
+                        android:id="@+id/flip8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/transparent_black"
+
+
+                        >
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/transparent_blue"
+                                android:fontFamily="@font/confortaa"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="NIKKON"
+                                android:textAlignment="center"
+                                android:textAllCaps="true"
+                                android:textColor="#fff"
+                                android:textSize="14dp"
+                                android:textStyle="bold"
+                                android:typeface="normal"
+
+
+                                />
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/transparent_blue"
+                                android:fontFamily="@font/confortaa"
+                                android:padding="10dp"
+                                android:text="hotel front is very nice and all types food available in the hote"
+                                android:textAlignment="center"
+                                android:textColor="#fff"
+                                android:textSize="14dp" />
+                        </LinearLayout>
+                    </ViewFlipper>
+                </LinearLayout>
+            </ViewFlipper>
+
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#0493ea"
+                android:fontFamily="@font/confortaa"
+                android:padding="10dp"
+                android:text="About Safrron"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#fff"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <ViewFlipper
+                android:id="@+id/flip9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/border"
+                    android:fontFamily="@font/confortaa"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Yatra.com is a leading aggregator of Hotels in India and internationally. With over 83,000 hotels in India covering 1100 cities, it is India’s largest platform for Domestic Hotels. Internationally it has more than 5 lakh hotels associated with it, covering popular destinations across the world."
+                    android:textAlignment="center"
+                    android:textColor="#fff" />
+
+            </ViewFlipper>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/transparent_blue"
+                android:fontFamily="@font/confortaa"
+                android:padding="10dp"
+                android:text="PRICE :$470/month"
+
+                android:textAlignment="center"
+                android:textColor="#fff" />
+
+            <Button
+                android:layout_width="300dp"
+                android:layout_height="0.5dp"
+                android:layout_margin="10dp"
+                android:background="#fff" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/book3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#0493ea"
+                    android:fontFamily="@font/confortaa"
+
+                    android:onClick="book"
+                    android:text="Book Now"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textSize="14dp" />
+
+                <Button
+                    android:id="@+id/detail3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#0493ea"
+                    android:fontFamily="@font/confortaa"
+                    android:onClick="detail"
+                    android:text="Show Details"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+
+                    android:textSize="14dp" />
+
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="300dp"
+                android:layout_height="0.5dp"
+                android:layout_margin="10dp"
+                android:background="#fff" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
+
+
+
